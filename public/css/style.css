@@ -3,6 +3,14 @@
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 
 nav {
@@ -61,7 +69,7 @@ nav ul li:hover {
 main {
   display: flex;
   flex-direction: column;
-  height: 400rem;
+  align-items: center;
 }
 
 .intro {
@@ -79,6 +87,10 @@ main {
 .intro--pic {
   width: 40rem;
   margin-top: 40px;
+}
+
+.firstly {
+  font-size: 3.5rem;
 }
 
 .fun {
@@ -138,7 +150,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 15rem;
+  margin-top: 14rem;
 }
 
 .ready--pic {
@@ -158,6 +170,28 @@ main {
   font-size: 2rem;
   margin-top: 2rem;
   cursor: pointer;
+  color: #ffffff;
+  width: 15rem;
+}
+
+.everyone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15rem;
+}
+
+.everyone--pic {
+  width: 35rem;
+}
+.everyone--text {
+  font-size: 2.3rem;
+  margin-bottom: 1.5rem;
+}
+.everyone--levels {
+  font-size: 1.3rem;
+  margin-bottom: 5rem;
 }
 
 .place {
@@ -167,16 +201,17 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .place--text {
-  font-size: 1.7rem;
-  margin-bottom: 3rem;
+  font-size: 2.3rem;
+  margin-bottom: 1.5rem;
 }
 
 .place--sport {
   font-size: 1.3rem;
-  margin-bottom: 9rem;
+  margin-bottom: 5rem;
 }
 
 .place--pics {
@@ -184,11 +219,25 @@ main {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 70%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
+  flex-wrap: wrap;
 }
 
 .place--pics img {
   width: 30rem;
+}
+
+.so {
+  margin-top: 14rem;
+  font-size: 2.9rem;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6rem;
+  margin-top: 5rem;
 }
