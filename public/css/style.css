@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  height: 11vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 4px solid #cac2c2;
+  font-weight: 600;
+}
+.logo {
+  width: 3vw;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 1.9rem;
+  color: #444444;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 40vw;
+  list-style: none;
+}
+
+nav ul li {
+  transition: color 0.2s ease-in;
+  font-size: 1.2rem;
+  padding: 15px;
+  color: #444444;
+}
+
+nav ul li:last-child {
+  background: #42bdb3;
+  color: #ffffff;
+  border-radius: 10%;
+  transition: all 0.4s ease;
+}
+
+nav ul li:last-child:hover {
+  color: #000000;
+  background: #49ddd1;
+}
+
+nav ul li:hover {
+  color: #42bdb3;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+nav ul li:hover {
+  transform: scale(1.1);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 400rem;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 45rem;
+}
+
+.intro--text {
+  font-size: 1.9rem;
+}
+
+.intro--pic {
+  width: 40rem;
+  margin-top: 40px;
+}
+
+.fun {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.fun--text {
+  width: 25rem;
+  margin-right: 14rem;
+  font-size: 1.7rem;
+}
+
+.fun--pic {
+  width: 30rem;
+}
+
+.pluses {
+  margin-top: 20rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.plus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 19rem;
+  height: 20rem;
+}
+
+.pluses--pic {
+  height: 6rem;
+}
+
+.pluses--text {
+  font-size: 1.3rem;
+}
+
+.pluses--title {
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin: 3rem 0 1rem 0;
+}
+
+.ready {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15rem;
+}
+
+.ready--pic {
+  width: 25rem;
+  margin-bottom: 5rem;
+}
+
+.ready--text {
+  font-size: 3rem;
+}
+
+.ready--button {
+  background: #42bdb3;
+  border-radius: 2rem;
+  padding: 1rem;
+  border: none;
+  font-size: 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.place {
+  margin-top: 20rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.place--text {
+  font-size: 1.7rem;
+  margin-bottom: 3rem;
+}
+
+.place--sport {
+  font-size: 1.3rem;
+  margin-bottom: 9rem;
+}
+
+.place--pics {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.place--pics img {
+  width: 30rem;
+}
