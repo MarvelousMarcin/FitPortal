@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "loginStyle.scss"
+    ],
+    "names": [],
+    "file": "loginStyle.css"
+}

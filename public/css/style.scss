@@ -1,0 +1,89 @@
+$blueColor: #42bdb3;
+$textColor: #444444;
+$redColor: #e3647d;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: $textColor;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+nav {
+  height: 11vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 4px solid #ddd6d6;
+  font-weight: 600;
+}
+.logo {
+  width: 3vw;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 1.9rem;
+  color: $textColor;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 40vw;
+  list-style: none;
+}
+
+nav ul li {
+  transition: color 0.2s ease-in;
+  font-size: 1.2rem;
+  padding: 15px;
+  color: $textColor;
+  a {
+    text-decoration: none;
+  }
+}
+
+nav ul li:last-child {
+  background: $blueColor;
+  color: #ffffff;
+  border-radius: 10%;
+  transition: all 0.4s ease;
+}
+
+nav ul li:last-child:hover {
+  color: #ffffff;
+  background: $redColor;
+}
+
+nav ul li:hover {
+  color: $blueColor;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+nav ul li:hover {
+  transform: scale(1.1);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6rem;
+  margin-top: 5rem;
+}
