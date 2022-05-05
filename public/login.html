@@ -16,8 +16,6 @@
   </head>
   <body>
     <img class="wave" src="./img/wave.png" />
-    <!--  -->
-    <!-- <i class="fi fi-rr-lock"></i> -->
     <nav>
       <div class="logo"><span style="color: #42bdb3">Fit</span>Portal</div>
       <ul>
@@ -34,17 +32,29 @@
         <div class="login--text">Welcome</div>
         <form>
           <div class="login--input">
+            <div class="login--upper-login invisible">Login</div>
             <i class="fi fi-rr-user"></i>
-            <input placeholder="Login" type="text" required />
+            <input
+              id="login--input--id"
+              placeholder="Login"
+              type="text"
+              required
+            />
           </div>
           <div class="login--input">
+            <div class="login--upper-password invisible">Password</div>
             <i class="fi fi-rr-lock"></i>
-            <input placeholder="Password" type="password" required />
+            <input
+              id="password--input--id"
+              placeholder="Password"
+              type="password"
+              required
+            />
           </div>
           <button>Login</button>
         </form>
       </div>
     </main>
-    <script src=""></script>
+    <script src="./js/loginPage/login.js"></script>
   </body>
 </html>

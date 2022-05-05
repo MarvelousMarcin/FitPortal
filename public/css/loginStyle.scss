@@ -53,10 +53,36 @@ main {
     height: 65%;
 
     .login--input {
+      margin-bottom: 1.6rem;
       border-bottom: 4px solid #42bdb3;
+      position: relative;
       i {
         font-size: 1.8rem;
       }
+
+      .login--upper-login {
+        position: absolute;
+        top: -0.8rem;
+        left: 4rem;
+        width: 100%;
+        height: 2rem;
+        z-index: -3;
+        transition: all 0.3s ease;
+      }
+
+      .login--upper-password {
+        position: absolute;
+        top: -0.8rem;
+        left: 4rem;
+        width: 100%;
+        height: 2rem;
+        z-index: -3;
+        transition: all 0.3s ease;
+      }
+    }
+
+    .invisible {
+      transform: translateY(1rem);
     }
 
     input {
@@ -77,6 +103,12 @@ main {
       color: #444444;
       font-size: 1.5rem;
       color: #ffffff;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        width: 15rem;
+      }
     }
   }
 }
