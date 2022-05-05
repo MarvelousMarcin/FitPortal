@@ -1,1 +1,112 @@
-/* No CSS *//*# sourceMappingURL=loginStyle.css.map */
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main img {
+  width: 50rem;
+}
+
+.wave {
+  position: fixed;
+  z-index: -8;
+  bottom: 0;
+  left: 0;
+  width: 35%;
+  overflow: hidden;
+}
+
+.login--box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 60%;
+}
+
+.login--box .login--text {
+  font-size: 4rem;
+}
+
+.login--box form {
+  -webkit-touch-callout: text;
+  /* iOS Safari */
+  -webkit-user-select: text;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: text;
+  /* Firefox */
+  -ms-user-select: text;
+  /* Internet Explorer/Edge */
+  user-select: text;
+  /* Non-prefixed version, currently
+                                      supported by Chrome and Opera */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 65%;
+}
+
+.login--box form .login--input {
+  border-bottom: 4px solid #42bdb3;
+}
+
+.login--box form .login--input i {
+  font-size: 1.8rem;
+}
+
+.login--box form input {
+  outline: none;
+  width: 25rem;
+  height: 3.7rem;
+  padding: 2rem;
+  font-size: 1.3rem;
+  border: none;
+}
+
+.login--box form button {
+  width: 14rem;
+  height: 3rem;
+  outline: none;
+  border: none;
+  background: #42bdb3;
+  color: #444444;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+/*# sourceMappingURL=loginStyle.css.map */

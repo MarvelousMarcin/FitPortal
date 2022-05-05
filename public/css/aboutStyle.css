@@ -290,4 +290,24 @@
   margin-top: 14rem;
   font-size: 2.9rem;
 }
+
+footer {
+  position: relative;
+}
+
+footer .footer-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -3;
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
+}
+
+footer .footer-text {
+  position: absolute;
+  font-size: 1.1rem;
+  color: #ffffff;
+  bottom: 0;
+}
 /*# sourceMappingURL=aboutStyle.css.map */

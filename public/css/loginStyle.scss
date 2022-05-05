@@ -1,0 +1,82 @@
+$blueColor: #42bdb3;
+$textColor: #444444;
+$redColor: #e3647d;
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 80%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+  img {
+    width: 50rem;
+  }
+}
+
+.wave {
+  position: fixed;
+  z-index: -8;
+  bottom: 0;
+  left: 0;
+  width: 35%;
+  overflow: hidden;
+}
+
+.login--box {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 60%;
+
+  .login--text {
+    font-size: 4rem;
+  }
+  form {
+    -webkit-touch-callout: text; /* iOS Safari */
+    -webkit-user-select: text; /* Safari */
+    -khtml-user-select: text; /* Konqueror HTML */
+    -moz-user-select: text; /* Firefox */
+    -ms-user-select: text; /* Internet Explorer/Edge */
+    user-select: text; /* Non-prefixed version, currently
+                                      supported by Chrome and Opera */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 65%;
+
+    .login--input {
+      border-bottom: 4px solid #42bdb3;
+      i {
+        font-size: 1.8rem;
+      }
+    }
+
+    input {
+      outline: none;
+      width: 25rem;
+      height: 3.7rem;
+      padding: 2rem;
+      font-size: 1.3rem;
+      border: none;
+    }
+
+    button {
+      width: 14rem;
+      height: 3rem;
+      outline: none;
+      border: none;
+      background: $blueColor;
+      color: #444444;
+      font-size: 1.5rem;
+      color: #ffffff;
+    }
+  }
+}
