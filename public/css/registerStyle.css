@@ -1,0 +1,143 @@
+.register--bg {
+  z-index: -8;
+  position: fixed;
+  width: 40%;
+  right: 10%;
+  overflow: hidden;
+  bottom: -2rem;
+}
+
+.ball {
+  position: fixed;
+  z-index: -5;
+  width: 4rem;
+}
+
+.ball1 {
+  left: 3rem;
+  bottom: 6rem;
+}
+
+.ball2 {
+  right: 3rem;
+  bottom: 12rem;
+}
+
+.ball3 {
+  left: 12rem;
+  top: 9rem;
+}
+
+.ball4 {
+  right: 12rem;
+  top: 12rem;
+}
+
+.ball5 {
+  left: 4rem;
+  top: 22rem;
+}
+
+.register--img {
+  width: 40vw;
+  height: 70vh;
+}
+
+main {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 89vh;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form .register--title {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+form .register--input {
+  margin-bottom: 1rem;
+  border-bottom: 4px solid #42bdb3;
+}
+
+form i {
+  font-size: 1.8rem;
+}
+
+form .register--input--checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 40%;
+}
+
+form .register--input--checkbox input {
+  padding: 0.5rem;
+  width: 1.5rem;
+}
+
+input {
+  outline: none;
+  width: 30rem;
+  height: 3.7rem;
+  padding: 2rem;
+  font-size: 1.3rem;
+  border: none;
+}
+
+button {
+  width: 14rem;
+  height: 3rem;
+  outline: none;
+  border: none;
+  background: #42bdb3;
+  color: #444444;
+  font-size: 1.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  width: 15rem;
+}
+/*# sourceMappingURL=registerStyle.css.map */

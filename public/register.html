@@ -2,11 +2,20 @@
   <head>
     <title>FitPortal - Login</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/registerStyle.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
     />
   </head>
   <body>
@@ -19,6 +28,45 @@
         <li>Sign up</li>
       </ul>
     </nav>
-    <script src=""></script>
+
+    <main>
+      <img class="ball ball1" src="./img/ball.svg" />
+      <img class="ball ball2" src="./img/ball.svg" />
+      <img class="ball ball3" src="./img/ball.svg" />
+      <img class="ball ball4" src="./img/ball.svg" />
+      <img class="ball ball5" src="./img/ball.svg" />
+
+      <img class="register--bg" src="./img/blob.svg" />
+      <form>
+        <div class="register--title">Join to us!</div>
+        <div class="register--input">
+          <i class="fi fi-rs-user"></i>
+          <input type="text" placeholder="Login" />
+        </div>
+
+        <div class="register--input">
+          <i class="fi fi-rr-envelope"></i>
+          <input type="text" placeholder="E-mail" />
+        </div>
+        <div class="register--input">
+          <i class="fi fi-rr-key"></i>
+          <input type="password" placeholder="Password" />
+        </div>
+        <div class="register--input">
+          <i class="fi fi-rr-key"></i>
+          <input type="password" placeholder="Repeat password" />
+        </div>
+        <div class="register--input--checkbox">
+          <label for="rules">Accept our rules</label>
+          <input type="checkbox" name="rules" />
+        </div>
+
+        <button>Create account</button>
+      </form>
+      <img class="register--img" src="./img/undraw_world_re_768g.svg" />
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="./js/registerPage/animation.js"></script>
   </body>
 </html>
