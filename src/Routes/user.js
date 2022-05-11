@@ -2,6 +2,7 @@ const express = require("express");
 const bcrypt = require("bcrypt");
 const userRoute = express.Router();
 const User = require("../Models/user");
+const UserJoi = require("../Validate/validateUser");
 const { auth, loginRedir, reDirToMain } = require("./auth");
 
 const saltRounds = 10;
@@ -28,13 +29,15 @@ userRoute.post("/register", async (req, res) => {
   if (findUser) {
     return res.status(400).send({ error: "This login is used" });
   }
+
   try {
+    await UserJoi.validateAsync({ login, password, email });
     password = bcrypt.hashSync(password, saltRounds);
     const user = new User({ login, password, email });
     await user.save();
-    res.send(req.body);
+    res.send();
   } catch (error) {
-    return res.status(400).send({ error: "Problem with registration" });
+    return res.status(400).send({ error });
   }
 });
 
