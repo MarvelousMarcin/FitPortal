@@ -67,19 +67,12 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-nav ul li:last-child {
-  background: #42bdb3;
-  color: #ffffff;
-  border-radius: 10%;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-
-nav ul li:last-child:hover {
-  color: #ffffff;
-  background: #e3647d;
+nav ul li a:hover {
+  color: #42bdb3;
 }
 
 nav ul li:hover {
@@ -87,6 +80,22 @@ nav ul li:hover {
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+nav ul li:last-child {
+  background: #42bdb3;
+  border-radius: 10%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+nav ul li:last-child a {
+  color: #ffffff;
+}
+
+nav ul li:last-child:hover {
+  color: #ffffff;
+  background: #e3647d;
 }
 
 nav ul li:hover {

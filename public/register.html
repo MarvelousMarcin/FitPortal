@@ -6,6 +6,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
@@ -23,7 +27,7 @@
       <div class="logo"><span style="color: #42bdb3">Fit</span>Portal</div>
       <ul>
         <li><a href="/">About</a></li>
-        <li>News</li>
+        <li><a href="/news">News</a></li>
         <li><a href="/login">Log in</a></li>
         <li>Sign up</li>
       </ul>
@@ -41,24 +45,24 @@
         <div class="register--title">Join to us!</div>
         <div class="register--input">
           <i class="fi fi-rs-user"></i>
-          <input type="text" placeholder="Login" />
+          <input type="text" placeholder="Login" required />
         </div>
 
         <div class="register--input">
           <i class="fi fi-rr-envelope"></i>
-          <input type="text" placeholder="E-mail" />
+          <input type="text" placeholder="E-mail" required />
         </div>
         <div class="register--input">
           <i class="fi fi-rr-key"></i>
-          <input type="password" placeholder="Password" />
+          <input type="password" placeholder="Password" required />
         </div>
         <div class="register--input">
           <i class="fi fi-rr-key"></i>
-          <input type="password" placeholder="Repeat password" />
+          <input type="password" placeholder="Repeat password" required />
         </div>
         <div class="register--input--checkbox">
           <label for="rules">Accept our rules</label>
-          <input type="checkbox" name="rules" />
+          <input type="checkbox" name="rules" required />
         </div>
 
         <button>Create account</button>

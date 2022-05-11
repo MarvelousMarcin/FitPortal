@@ -1,0 +1,74 @@
+.news--welcome {
+  font-size: 3rem;
+  margin: 4rem 0 4rem 0;
+}
+
+.news--list .news--news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-bottom: 1px solid #ddd6d6;
+}
+
+.news--list .news--news .news--date {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: #42bdb3;
+  font-weight: 600;
+}
+
+.news--list .news--news .news--content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.news--list .news--news .news--content img {
+  width: 25rem;
+}
+
+.news--list .news--news .news--content .news--content-text {
+  width: 35rem;
+  font-size: 1.4rem;
+}
+
+.news-bg1 {
+  position: fixed;
+  z-index: -5;
+  bottom: 0;
+  right: 0;
+  height: 40%;
+}
+
+.news-bg2 {
+  position: fixed;
+  z-index: -5;
+  bottom: 0;
+  left: 0;
+  height: 40%;
+}
+/*# sourceMappingURL=newsStyle.css.map */

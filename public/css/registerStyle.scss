@@ -72,7 +72,7 @@ form {
 
   .register--input {
     margin-bottom: 1rem;
-    border-bottom: 4px solid #42bdb3;
+    border-bottom: 4px solid $blueColor;
   }
 
   i {
@@ -108,13 +108,33 @@ button {
   outline: none;
   border: none;
   background: $blueColor;
-  color: #444444;
+  color: $textColor;
   font-size: 1.5rem;
   color: #ffffff;
   cursor: pointer;
   transition: all 0.2s ease;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    background: $redColor;
+    width: 100%;
+    height: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
 
   &:hover {
-    width: 15rem;
+    width: 17rem;
+  }
+
+  &:hover::before {
+    height: 100%;
   }
 }

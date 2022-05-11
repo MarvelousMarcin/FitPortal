@@ -10,7 +10,7 @@ const t1 = gsap.timeline({
   yoyo: true,
 });
 balls.forEach((ball) => {
-  t1.to(ball, { rotation: 360, scaleX: 1.7, scaleY: 1.7 });
+  t1.to(ball, { rotation: 360, scaleX: 1.5, scaleY: 1.5 });
 });
 
 t1.play();
