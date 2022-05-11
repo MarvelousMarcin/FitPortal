@@ -53,7 +53,7 @@ nav ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 40vw;
+  width: 50vw;
   list-style: none;
 }
 
@@ -75,13 +75,6 @@ nav ul li a:hover {
   color: #42bdb3;
 }
 
-nav ul li:hover {
-  color: #42bdb3;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
 nav ul li:last-child {
   background: #42bdb3;
   border-radius: 10%;
@@ -96,11 +89,6 @@ nav ul li:last-child a {
 nav ul li:last-child:hover {
   color: #ffffff;
   background: #e3647d;
-}
-
-nav ul li:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 main {

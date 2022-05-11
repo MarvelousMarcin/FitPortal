@@ -2,12 +2,12 @@ const express = require("express");
 const bcrypt = require("bcrypt");
 const userRoute = express.Router();
 const User = require("../Models/user");
-const { auth, loginRedir } = require("./auth");
+const { auth, loginRedir, reDirToMain } = require("./auth");
 
 const saltRounds = 10;
 
-userRoute.get("/mainpage", auth, (req, res) => {
-  res.render("mainPage", { name: req.user.login });
+userRoute.get("/mainpage", reDirToMain, (req, res) => {
+  res.render("mainPage", { name: "TEST" });
 });
 
 userRoute.post("/register", async (req, res) => {
@@ -38,7 +38,7 @@ userRoute.post("/register", async (req, res) => {
   }
 });
 
-userRoute.post("/login", loginRedir, async (req, res) => {
+userRoute.post("/login", async (req, res) => {
   // Check if we got request body
   if (!req.body) {
     return res.status(400).send({ error: "Wrong data" });
@@ -69,10 +69,15 @@ userRoute.post("/login", loginRedir, async (req, res) => {
       login,
       password,
     };
-    res.send("ok");
+    res.send();
   } else {
-    res.send("wrong");
+    res.status(403).send();
   }
+});
+
+userRoute.get("/logout", reDirToMain, (req, res) => {
+  req.session.destroy();
+  res.redirect("/");
 });
 
 module.exports = userRoute;

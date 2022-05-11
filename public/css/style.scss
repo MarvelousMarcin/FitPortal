@@ -39,7 +39,7 @@ nav {
 nav ul {
   display: flex;
   justify-content: space-between;
-  width: 40vw;
+  width: 50vw;
   list-style: none;
 }
 
@@ -56,12 +56,6 @@ nav ul li {
       color: $blueColor;
     }
   }
-
-  &:hover {
-    color: $blueColor;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
 }
 
 nav ul li:last-child {
@@ -77,10 +71,6 @@ nav ul li:last-child {
 nav ul li:last-child:hover {
   color: #ffffff;
   background: $redColor;
-}
-
-nav ul li:hover {
-  transform: scale(1.1);
 }
 
 main {

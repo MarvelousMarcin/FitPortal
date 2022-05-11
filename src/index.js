@@ -1,14 +1,12 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const path = require("path");
 const port = process.env.PORT || 3000;
 const publicDirPath = path.join(__dirname, "../public");
 const UserRoute = require("./Routes/user");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
-
+const { auth } = require("./Routes/auth");
 require("./mongoose");
-
 const dbString = "mongodb://127.0.0.1:27017/FitPortal";
 const app = express();
 app.use(express.static(publicDirPath));
@@ -20,7 +18,7 @@ app.use(
   session({
     secret: "some secret",
     resave: false,
-    cookie: { maxAge: 300000 },
+    cookie: { maxAge: 3000000 },
     saveUninitialized: false,
     store: MongoStore.create({ mongoUrl: dbString }),
   })
@@ -28,11 +26,7 @@ app.use(
 
 app.use(UserRoute);
 
-app.get("/", (req, res) => {
-  res.render("index");
-});
-
-app.get("/login", (req, res) => {
+app.get("/login", auth, (req, res) => {
   res.render("login");
 });
 

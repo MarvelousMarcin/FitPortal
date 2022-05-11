@@ -2,6 +2,7 @@
   <head>
     <title>FitPortal - Login</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/loginSmall.css" />
     <link rel="stylesheet" href="./css/loginStyle.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,7 +22,7 @@
       <ul>
         <li><a href="/">About</a></li>
         <li><a href="/news">News</a></li>
-        <li>Log in</li>
+        <li class="menu--login">Log in</li>
         <li><a href="/register">Sign up</a></li>
       </ul>
     </nav>
@@ -51,10 +52,11 @@
               required
             />
           </div>
-          <button>Login</button>
+          <button class="login--btn">Login</button>
         </form>
       </div>
     </main>
+    <script src="./js/loginPage/loginRequest.js"></script>
     <script src="./js/loginPage/login.js"></script>
   </body>
 </html>
