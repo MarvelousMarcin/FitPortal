@@ -9,6 +9,7 @@ const auth = function (req, res, next) {
 
 const reDirToMain = function (req, res, next) {
   if (req.session.authenticated) {
+    req.user = req.session.user;
     return next();
   }
 

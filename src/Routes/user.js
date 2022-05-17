@@ -8,7 +8,7 @@ const { auth, loginRedir, reDirToMain } = require("./auth");
 const saltRounds = 10;
 
 userRoute.get("/mainpage", reDirToMain, (req, res) => {
-  res.render("mainPage", { name: "TEST" });
+  res.render("mainPage", { login: req.user.login });
 });
 
 userRoute.post("/register", async (req, res) => {

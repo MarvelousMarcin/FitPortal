@@ -5,7 +5,7 @@ const publicDirPath = path.join(__dirname, "../public");
 const UserRoute = require("./Routes/user");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
-const { auth } = require("./Routes/auth");
+const { auth, reDirToMain } = require("./Routes/auth");
 require("./mongoose");
 const dbString = "mongodb://127.0.0.1:27017/FitPortal";
 const app = express();
@@ -28,6 +28,10 @@ app.use(UserRoute);
 
 app.get("/login", auth, (req, res) => {
   res.render("login");
+});
+
+app.get("/data", reDirToMain, (req, res) => {
+  res.render("data", { login: req.user.login });
 });
 
 app.get("/register", (req, res) => {

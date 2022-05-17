@@ -1,0 +1,88 @@
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 67%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 89vh;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+main .data--options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  top: 2rem;
+  left: -5rem;
+  width: 13rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .data--options .data--option {
+  width: 3rem;
+  cursor: pointer;
+}
+
+main .data--containter {
+  font-size: 1.9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 40vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .data--containter input {
+  border: none;
+  outline: none;
+  background: none;
+  color: #42bdb3;
+  font-size: 1.9rem;
+  margin-left: 4rem;
+  font-weight: 800;
+}
+
+main .data--containter img {
+  width: 6rem;
+  position: absolute;
+  top: 40%;
+  left: 1rem;
+}
+
+main img {
+  width: 40%;
+}
+
+.rectbg {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -3;
+  -webkit-transform: translateY(40%);
+          transform: translateY(40%);
+}
+/*# sourceMappingURL=dataStyle.css.map */

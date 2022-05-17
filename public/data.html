@@ -3,7 +3,7 @@
   <head>
     <title>FitPortal</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/dataStyle.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,18 +24,31 @@
       </ul>
     </nav>
     <main>
-      <div class="hello">Hey {{login}}. What you can do now?</div>
-
-      <div class="what--to--do">
-        <div class="todo--adddata">
-          1. You can add data about weigth, heigth, age etc. We will use it to
-          help you.
+      <div class="data--options">
+        <img class="data--option" src="./img/icons8-settings-128.svg" />
+        <img class="data--option" src="./img/icons8-info-128.svg" />
+        <img class="data--option" src="./img/icons8-connect.svg" />
+      </div>
+      <img class="rectbg" src="./img/wave (1).svg" />
+      <div class="data--containter">
+        <div class="data--heigth">
+          Heigth:
+          <input type="text" value="25kg" disabled />
         </div>
-        <div class="todo--addfriends">
-          2. You can also add your friends to message them, or share your recent
-          achievements.
+        <div class="data--weigth">
+          Weigth:
+          <input type="text" value="180cm" disabled />
+        </div>
+        <div class="data--age">
+          Age:
+          <input type="text" value="25yo" disabled />
+        </div>
+        <div class="data--sex">
+          Sex:
+          <input type="text" value="Male" disabled />
         </div>
       </div>
+      <img src="./img/undraw_a_whole_year_vnfm.svg" />
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
