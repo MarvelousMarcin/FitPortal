@@ -20,7 +20,7 @@ main {
 }
 
 main img {
-  width: 50rem;
+  width: 40vw;
 }
 
 .wave {
@@ -45,7 +45,7 @@ main img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 60%;
+  height: 65%;
 }
 
 .login--box .login--text {

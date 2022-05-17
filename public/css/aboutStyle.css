@@ -71,9 +71,11 @@
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 90rem;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .plus {

@@ -24,6 +24,10 @@ main {
     .data--option {
       width: 3rem;
       cursor: pointer;
+      transition: transform .3s ease;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -33,6 +37,7 @@ main {
     flex-direction: column;
     height: 40vh;
     justify-content: space-between;
+
     input {
       border: none;
       outline: none;
@@ -41,6 +46,11 @@ main {
       font-size: 1.9rem;
       margin-left: 4rem;
       font-weight: 800;
+      width: 40%;
+    }
+
+    .data--input {
+      width: 30rem;
     }
 
     img {

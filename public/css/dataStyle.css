@@ -38,6 +38,15 @@ main .data--options {
 main .data--options .data--option {
   width: 3rem;
   cursor: pointer;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+main .data--options .data--option:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 main .data--containter {
@@ -63,6 +72,11 @@ main .data--containter input {
   font-size: 1.9rem;
   margin-left: 4rem;
   font-weight: 800;
+  width: 40%;
+}
+
+main .data--containter .data--input {
+  width: 30rem;
 }
 
 main .data--containter img {
