@@ -46,6 +46,10 @@ nav {
   color: #444444;
 }
 
+.logo a {
+  text-decoration: none;
+}
+
 nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
