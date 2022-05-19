@@ -1,3 +1,5 @@
+const User = require("../Models/user");
+
 const auth = function (req, res, next) {
   if (req.session.authenticated) {
     req.user = req.session.user;
@@ -7,9 +9,9 @@ const auth = function (req, res, next) {
   next();
 };
 
-const reDirToMain = function (req, res, next) {
+const reDirToMain = async function (req, res, next) {
   if (req.session.authenticated) {
-    req.user = req.session.user;
+    req.user = await User.findOne({ login: req.session.user.login });
     return next();
   }
 

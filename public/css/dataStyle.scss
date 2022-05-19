@@ -24,7 +24,7 @@ main {
     .data--option {
       width: 3rem;
       cursor: pointer;
-      transition: transform .3s ease;
+      transition: transform 0.3s ease;
       &:hover {
         transform: scale(1.1);
       }
@@ -37,6 +37,7 @@ main {
     flex-direction: column;
     height: 40vh;
     justify-content: space-between;
+    position: relative;
 
     input {
       border: none;
@@ -58,6 +59,27 @@ main {
       position: absolute;
       top: 40%;
       left: 1rem;
+    }
+
+    .data--save {
+      opacity: 0;
+      position: absolute;
+      bottom: 45%;
+      left: -12rem;
+      width: 7rem;
+      height: 3rem;
+      font-size: 1rem;
+      background: $blueColor;
+      outline: none;
+      color: white;
+      border: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+        background: $redColor;
+      }
     }
   }
 

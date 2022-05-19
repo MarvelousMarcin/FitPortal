@@ -3,6 +3,7 @@ const path = require("path");
 const port = process.env.PORT || 3000;
 const publicDirPath = path.join(__dirname, "../public");
 const UserRoute = require("./Routes/user");
+const DataRoute = require("./Routes/data");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const { auth, reDirToMain } = require("./Routes/auth");
@@ -25,6 +26,7 @@ app.use(
 );
 
 app.use(UserRoute);
+app.use(DataRoute);
 
 app.get("/login", auth, (req, res) => {
   res.render("login");
