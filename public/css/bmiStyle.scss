@@ -1,0 +1,36 @@
+$blueColor: #42bdb3;
+$textColor: #444444;
+$redColor: #e3647d;
+
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 89vh;
+  width: 80%;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+
+  .bmi--info {
+    width: 40%;
+
+    .bmi--value {
+      font-size: 4rem;
+      color: $redColor;
+      font-weight: 800;
+    }
+    .bmi--status {
+      font-size: 2rem;
+      color: $blueColor;
+    }
+    .bmi--tip {
+      font-weight: 600;
+    }
+  }
+
+  .bmi--pic {
+    width: 40%;
+  }
+}

@@ -3,7 +3,7 @@
   <head>
     <title>FitPortal</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/bmiStyle.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,21 +26,15 @@
       </ul>
     </nav>
     <main>
-      <div class="hello">Hey {{login}}. What you can do now?</div>
-
-      <div class="what--to--do">
-        <div class="todo--adddata">
-          1. You can add data about weigth, heigth, age etc. We will use it to
-          help you.
-        </div>
-        <div class="todo--addfriends">
-          2. You can also add your friends to message them, or share your recent
-          achievements.
+      <img class="bmi--pic" src="./img/undraw_indoor_bike_pwa4 (1).svg" />
+      <div class="bmi--info">
+        <div class="bmi--value">20.3</div>
+        <div class="bmi--status">Normal weigth</div>
+        <div class="bmi--tip">
+          Keep up the good work! For tips on maintaining a healthy weight, check
+          out the food and diet and fitness sections.
         </div>
       </div>
     </main>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="./js/aboutPage/observer.js"></script>
   </body>
 </html>
