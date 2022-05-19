@@ -19,4 +19,15 @@ dataRoute.post("/data", reDirToMain, async (req, res) => {
   }
 });
 
+dataRoute.get("/dataValue", reDirToMain, async (req, res) => {
+  const userId = req.user._id;
+  const data = await Data.findOne({ user: userId });
+
+  if (!data) {
+    res.status(403).send({ message: "No data" });
+  } else {
+    res.send(data);
+  }
+});
+
 module.exports = dataRoute;
