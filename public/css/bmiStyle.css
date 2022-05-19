@@ -31,15 +31,64 @@ main .bmi--info .bmi--value {
 }
 
 main .bmi--info .bmi--status {
+  font-weight: 600;
   font-size: 2rem;
   color: #42bdb3;
 }
 
 main .bmi--info .bmi--tip {
-  font-weight: 600;
+  font-size: 1.4rem;
 }
 
 main .bmi--pic {
   width: 40%;
+}
+
+footer {
+  margin-top: 15rem;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer .info--img {
+  width: 30%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+footer .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80%;
+}
+
+footer .list .info {
+  font-size: 1.7rem;
 }
 /*# sourceMappingURL=bmiStyle.css.map */

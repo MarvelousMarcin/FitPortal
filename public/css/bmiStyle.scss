@@ -22,15 +22,46 @@ main {
       font-weight: 800;
     }
     .bmi--status {
+      font-weight: 600;
+
       font-size: 2rem;
       color: $blueColor;
     }
     .bmi--tip {
-      font-weight: 600;
+      font-size: 1.4rem;
     }
   }
 
   .bmi--pic {
     width: 40%;
+  }
+}
+
+footer {
+  margin-top: 15rem;
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  .info--img {
+    width: 30%;
+    transform: scale(0);
+    transition: all 1s ease;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+
+    .info {
+      font-size: 1.7rem;
+    }
   }
 }

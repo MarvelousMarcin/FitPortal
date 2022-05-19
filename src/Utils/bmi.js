@@ -9,7 +9,7 @@ const getStatus = (bmi) => {
       status: "Underweigth",
       tip: "Being underweight could be a sign you're not eating enough or you may be ill. If you're underweight, a GP can help.",
     };
-  } else if (bmi >= 18 && bmi <= 24.9) {
+  } else if (bmi >= 18.5 && bmi <= 24.9) {
     return {
       status: "Normal Weigth",
       tip: "Keep up the good work! For tips on maintaining a healthy weight, check out the food and diet and fitness sections.",
