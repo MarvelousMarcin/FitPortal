@@ -1,0 +1,62 @@
+main {
+  height: 89vh;
+}
+
+main .bg--pic {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 20%;
+}
+
+main .bg--wave {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: -5;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+}
+
+main .friends--container {
+  margin-top: 5rem;
+  width: 30%;
+}
+
+main .friends--container .friends--friend {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5rem;
+}
+
+main .friends--container .friends--friend i {
+  font-size: 2rem;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+main .friends--container .friends--friend i:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+main .friends--container .friends--friend .login {
+  width: 80%;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #e3647d;
+}
+/*# sourceMappingURL=friendsStyle.css.map */

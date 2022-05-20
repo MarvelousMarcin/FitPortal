@@ -1,0 +1,51 @@
+$blueColor: #42bdb3;
+$textColor: #444444;
+$redColor: #e3647d;
+
+main {
+  height: 89vh;
+
+  .bg--pic {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 20%;
+  }
+
+  .bg--wave {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: -5;
+    transform: translateX(-10%);
+  }
+
+  .friends--container {
+    margin-top: 5rem;
+    width: 30%;
+    .friends--friend {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      height: 5rem;
+      i {
+        font-size: 2rem;
+        transition: all 0.4s ease;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+      .login {
+        width: 80%;
+        font-size: 2rem;
+        font-weight: 800;
+        color: $redColor;
+      }
+    }
+  }
+}
