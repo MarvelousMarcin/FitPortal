@@ -42,7 +42,7 @@ ActivitiesRoute.post("/activities", reDirToMain, async (req, res) => {
   res.send();
 });
 
-ActivitiesRoute.get("/activitieslist", reDirToMain, async (req, res) => {
+ActivitiesRoute.post("/activitieslist", reDirToMain, async (req, res) => {
   const userId = req.user._id;
   const typeOfActiv = req.body.type;
 
