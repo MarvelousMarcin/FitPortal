@@ -9,6 +9,7 @@ const UserRoute = require("./Routes/user");
 const BmiRoute = require("./Routes/bmi");
 const DataRoute = require("./Routes/data");
 const FriendsRoute = require("./Routes/friends");
+const ActivRoute = require("./Routes/activities");
 
 const wrap = (middleware) => (socket, next) =>
   middleware(socket.request, {}, next);
@@ -52,6 +53,7 @@ app.use(UserRoute);
 app.use(DataRoute);
 app.use(BmiRoute);
 app.use(FriendsRoute);
+app.use(ActivRoute);
 
 app.get("/login", auth, (req, res) => {
   res.render("login");
@@ -65,7 +67,7 @@ app.get("/data", reDirToMain, (req, res) => {
   res.render("data", { login: req.user.login });
 });
 
-app.get("/activites", reDirToMain, (req, res) => {
+app.get("/activities", reDirToMain, (req, res) => {
   res.render("activities");
 });
 
