@@ -2,10 +2,10 @@
 const socket = io();
 
 const messages = document.querySelector(".messages");
-const $sendBtn = document.querySelector(".send--message");
-const $messInput = document.querySelector(".message--input");
 const $friends = document.querySelector(".friends--container");
 const $userLoginInput = document.querySelector(".user--login--input");
+const $chatBox = document.querySelector(".chat--box");
+const $boxMessage = document.querySelector(".message");
 
 const $addFriendDbBtn = document.querySelector(".add--user--btn");
 const $addFriendBtn = document.querySelector(".fi-rr-user-add");
@@ -19,7 +19,7 @@ const getFriendsList = async function () {
   const data = await response.json();
 
   data.forEach((friend) => {
-    const html = `<div class="friends--friend">
+    const html = `<div value="${friend}" class="friends--friend">
     <div class="login">${friend}</div>
     <i class="fi fi-rr-user"></i>
     <i class="fi fi-rr-envelope"></i>
@@ -27,6 +27,15 @@ const getFriendsList = async function () {
 
     $friends.insertAdjacentHTML("beforeend", html);
   });
+
+  const $sendMess = document.querySelectorAll(".fi-rr-envelope");
+
+  $sendMess.forEach((envelop) =>
+    envelop.addEventListener("click", function (e) {
+      const messToUser = this.closest(".friends--friend").getAttribute("value");
+      $boxMessage.textContent = messToUser;
+    })
+  );
 };
 
 $addFriendDbBtn.addEventListener("click", async () => {
@@ -61,29 +70,9 @@ $addFriendDbBtn.addEventListener("click", async () => {
   $userLoginInput.value = "";
 });
 
-// socket.emit("hello", { message: "test" });
-
-// socket.on("message", (message) => {
-//   const html = Mustache.render(messageTemplate, {
-//     message: message.text,
-//   });
-
-//   messages.insertAdjacentHTML("beforeend", html);
-// });
-
-$sendBtn.addEventListener("click", () => {
-  const mess = $messInput.value;
-
-  socket.emit("sendMessage", mess);
-});
-
-socket.on("createMessage", (message) => {
-  console.log(message);
-  const html = `<div class="message">
-  <p>${message.user} - ${message.text}</p>
-  </div>`;
-
-  messages.insertAdjacentHTML("beforeend", html);
-});
-
 getFriendsList();
+
+const $sendBtn = document.querySelector(".send--message");
+const $messInput = document.querySelector(".message--input");
+
+$sendBtn.addEventListener("click", () => {});

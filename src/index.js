@@ -48,15 +48,6 @@ io.use(
   )
 );
 
-io.on("connection", (socket) => {
-  socket.on("sendMessage", (message) => {
-    io.emit("createMessage", {
-      user: socket.request.session.user.login,
-      text: message,
-    });
-  });
-});
-
 app.use(UserRoute);
 app.use(DataRoute);
 app.use(BmiRoute);
@@ -74,8 +65,16 @@ app.get("/data", reDirToMain, (req, res) => {
   res.render("data", { login: req.user.login });
 });
 
+app.get("/activites", reDirToMain, (req, res) => {
+  res.render("activities");
+});
+
 app.get("/friends", reDirToMain, (req, res) => {
   res.render("friends");
+});
+
+app.get("/pushups", reDirToMain, (req, res) => {
+  res.render("pushups");
 });
 
 app.get("/register", (req, res) => {

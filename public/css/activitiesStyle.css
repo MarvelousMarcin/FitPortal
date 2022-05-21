@@ -1,0 +1,79 @@
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 89vh;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .title {
+  width: 30%;
+  font-weight: 800;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 3.6rem;
+  height: 70%;
+  color: #e3647d;
+}
+
+main .title img {
+  width: 120%;
+}
+
+main .activ--list {
+  font-size: 2rem;
+  height: 55%;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .activ--list .activity {
+  border-bottom: 8px solid #e3647d;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  cursor: pointer;
+}
+
+main .activ--list .activity a {
+  text-decoration: none;
+}
+
+main .activ--list .activity:hover {
+  border-bottom: 8px solid #42bdb3;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+/*# sourceMappingURL=activitiesStyle.css.map */

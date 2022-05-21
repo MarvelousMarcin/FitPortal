@@ -1,0 +1,75 @@
+main {
+  margin-top: 5rem;
+  position: relative;
+}
+
+main .fi {
+  color: #42bdb3;
+  font-size: 2rem;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+main .pic {
+  position: absolute;
+  width: 18rem;
+}
+
+main .pic1 {
+  left: 8rem;
+}
+
+main .pic2 {
+  top: 50rem;
+  right: 8rem;
+}
+
+main .pic3 {
+  left: 8rem;
+  top: 100rem;
+}
+
+main .pic4 {
+  right: 8rem;
+  top: 150rem;
+}
+
+main .push--elem {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 4rem;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 7px solid #42bdb3;
+  border-radius: 50%;
+  width: 18rem;
+  height: 18rem;
+  padding: 3rem;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+main .push--elem:hover {
+  border: 7px solid #e3647d;
+}
+
+main .push--elem .push--day {
+  font-size: 2.3rem;
+  font-weight: 800;
+}
+
+main .push--elem .push--work {
+  font-size: 1.3rem;
+}
+/*# sourceMappingURL=pushupsStyle.css.map */

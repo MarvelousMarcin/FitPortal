@@ -1,0 +1,67 @@
+$blueColor: #42bdb3;
+$textColor: #444444;
+$redColor: #e3647d;
+
+main {
+  margin-top: 5rem;
+  position: relative;
+
+  .fi {
+    color: #42bdb3;
+    font-size: 2rem;
+    transition: all 0.5s ease-out;
+    transform: scale(0);
+  }
+
+  .pic {
+    position: absolute;
+    width: 18rem;
+  }
+
+  .pic1 {
+    left: 8rem;
+  }
+
+  .pic2 {
+    top: 50rem;
+    right: 8rem;
+  }
+
+  .pic3 {
+    left: 8rem;
+    top: 100rem;
+  }
+
+  .pic4 {
+    right: 8rem;
+    top: 150rem;
+  }
+  .push--elem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    text-align: center;
+    justify-content: center;
+    border: 7px solid $blueColor;
+    border-radius: 50%;
+    width: 18rem;
+    height: 18rem;
+    padding: 3rem;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      border: 7px solid $redColor;
+    }
+
+    .push--day {
+      font-size: 2.3rem;
+      font-weight: 800;
+    }
+
+    .push--work {
+      font-size: 1.3rem;
+    }
+  }
+}

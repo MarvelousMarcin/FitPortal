@@ -3,7 +3,7 @@
   <head>
     <title>FitPortal</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/activitiesStyle.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,27 +20,22 @@
         <li><a href="/data">Your data</a></li>
         <li><a href="/friends">Friends</a></li>
         <li><a href="/bmi">BMI</a></li>
-        <li><a href="/activites">Activity</a></li>
+        <li><a href="">Activity</a></li>
         <li><a href="">Start Trening</a></li>
         <li><a href="/logout">Log out</a></li>
       </ul>
     </nav>
     <main>
-      <div class="hello">Hey {{login}}. What you can do now?</div>
-
-      <div class="what--to--do">
-        <div class="todo--adddata">
-          1. You can add data about weigth, heigth, age etc. We will use it to
-          help you.
-        </div>
-        <div class="todo--addfriends">
-          2. You can also add your friends to message them, or share your recent
-          achievements.
-        </div>
+      <div class="title">
+        Activities
+        <img src="./img/undraw_grand_slam_-0-q5r.svg" />
+      </div>
+      <div class="activ--list">
+        <div class="activity"><a href="/pushups">Road to 100 pushups</a></div>
+        <div class="activity">Road to 100 squats</div>
+        <div class="activity">Road to 100 burpees</div>
+        <div class="activity">Road to 10min plank</div>
       </div>
     </main>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="./js/aboutPage/observer.js"></script>
   </body>
 </html>
