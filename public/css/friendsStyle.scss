@@ -4,12 +4,62 @@ $redColor: #e3647d;
 
 main {
   height: 89vh;
+  position: relative;
 
   .bg--pic {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 20%;
+  }
+
+  .fi-rr-user-add {
+    position: absolute;
+    top: 2rem;
+    left: 10rem;
+    font-size: 2rem;
+
+    &:hover {
+      transition: all 0.4s ease;
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+  }
+
+  .invisible {
+    opacity: 0;
+  }
+
+  .add--user {
+    position: absolute;
+    top: 2rem;
+    left: 15rem;
+    transition: all 0.3s ease;
+
+    input {
+      height: 3rem;
+      width: 12rem;
+      padding: 1rem;
+      outline: none;
+      border: none;
+      font-size: 1.4rem;
+    }
+
+    button {
+      outline: none;
+      border: none;
+      background: $blueColor;
+      color: white;
+      padding: 0.3rem;
+      font-size: 1.1rem;
+      width: 8rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: $redColor;
+        cursor: pointer;
+      }
+    }
   }
 
   .bg--wave {
@@ -46,6 +96,24 @@ main {
         font-weight: 800;
         color: $redColor;
       }
+    }
+  }
+
+  .chat--box {
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    right: 10%;
+    border: 3px solid $blueColor;
+    width: 15%;
+    height: 30%;
+
+    .messages {
+      height: 80%;
+    }
+
+    input {
+      width: 50%;
     }
   }
 }

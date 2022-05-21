@@ -1,5 +1,6 @@
 main {
   height: 89vh;
+  position: relative;
 }
 
 main .bg--pic {
@@ -7,6 +8,59 @@ main .bg--pic {
   left: 0;
   bottom: 0;
   width: 20%;
+}
+
+main .fi-rr-user-add {
+  position: absolute;
+  top: 2rem;
+  left: 10rem;
+  font-size: 2rem;
+}
+
+main .fi-rr-user-add:hover {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  cursor: pointer;
+}
+
+main .invisible {
+  opacity: 0;
+}
+
+main .add--user {
+  position: absolute;
+  top: 2rem;
+  left: 15rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main .add--user input {
+  height: 3rem;
+  width: 12rem;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  font-size: 1.4rem;
+}
+
+main .add--user button {
+  outline: none;
+  border: none;
+  background: #42bdb3;
+  color: white;
+  padding: 0.3rem;
+  font-size: 1.1rem;
+  width: 8rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main .add--user button:hover {
+  background: #e3647d;
+  cursor: pointer;
 }
 
 main .bg--wave {
@@ -58,5 +112,23 @@ main .friends--container .friends--friend .login {
   font-size: 2rem;
   font-weight: 800;
   color: #e3647d;
+}
+
+main .chat--box {
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  right: 10%;
+  border: 3px solid #42bdb3;
+  width: 15%;
+  height: 30%;
+}
+
+main .chat--box .messages {
+  height: 80%;
+}
+
+main .chat--box input {
+  width: 50%;
 }
 /*# sourceMappingURL=friendsStyle.css.map */

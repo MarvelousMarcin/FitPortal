@@ -8,7 +8,10 @@ const publicDirPath = path.join(__dirname, "../public");
 const UserRoute = require("./Routes/user");
 const BmiRoute = require("./Routes/bmi");
 const DataRoute = require("./Routes/data");
+const FriendsRoute = require("./Routes/friends");
 
+const wrap = (middleware) => (socket, next) =>
+  middleware(socket.request, {}, next);
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const { auth, reDirToMain } = require("./Routes/auth");
@@ -33,10 +36,31 @@ app.use(
     store: MongoStore.create({ mongoUrl: dbString }),
   })
 );
+io.use(
+  wrap(
+    session({
+      secret: "some secret",
+      resave: false,
+      cookie: { maxAge: 3000000 },
+      saveUninitialized: false,
+      store: MongoStore.create({ mongoUrl: dbString }),
+    })
+  )
+);
+
+io.on("connection", (socket) => {
+  socket.on("sendMessage", (message) => {
+    io.emit("createMessage", {
+      user: socket.request.session.user.login,
+      text: message,
+    });
+  });
+});
 
 app.use(UserRoute);
 app.use(DataRoute);
 app.use(BmiRoute);
+app.use(FriendsRoute);
 
 app.get("/login", auth, (req, res) => {
   res.render("login");
@@ -65,3 +89,5 @@ app.get("/news", (req, res) => {
 server.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+module.exports = io;

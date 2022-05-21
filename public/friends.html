@@ -30,26 +30,31 @@
       </ul>
     </nav>
     <main>
-      <img class="bg--wave" src="./img/wave.png" />
-      <img class="bg--pic" src="./img/undraw_buddies_re_tuw4.svg" />
-
-      <div class="friends--container">
-        <div class="friends--friend">
-          <div class="login">test2</div>
-          <i class="fi fi-rr-user"></i>
-          <i class="fi fi-rr-envelope"></i>
+      <div class="chat--box">
+        <div class="messages">
+          <div class="message">Hey</div>
         </div>
-        <div class="friends--friend">
-          <div class="login">Martino</div>
-          <i class="fi fi-rr-user"></i>
-          <i class="fi fi-rr-envelope"></i>
-        </div>
-        <div class="friends--friend">
-          <div class="login">Zuzix</div>
-          <i class="fi fi-rr-user"></i>
-          <i class="fi fi-rr-envelope"></i>
-        </div>
+        <input class="message--input" type="text" placeholder="Message" />
+        <button class="send--message">Send</button>
       </div>
+
+      <div class="add--user invisible">
+        <input
+          class="user--login--input"
+          type="text"
+          placeholder="Enter login"
+        />
+        <button class="add--user--btn">Add</button>
+      </div>
+      <i class="fi fi-rr-user-add"></i>
+
+      <div class="friends--container"></div>
     </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/friendsPage/adding.js"></script>
   </body>
 </html>
