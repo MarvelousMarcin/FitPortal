@@ -51,6 +51,10 @@ ActivitiesRoute.post("/activitieslist", reDirToMain, async (req, res) => {
     typeOfActivitie: typeOfActiv,
   });
 
+  if (!daysList) {
+    return res.send([]);
+  }
+
   res.send(daysList.daysDone);
 });
 
