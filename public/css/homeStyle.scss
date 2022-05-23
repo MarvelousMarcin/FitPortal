@@ -1,0 +1,48 @@
+$blueColor: #42bdb3;
+$textColor: #444444;
+$redColor: #e3647d;
+
+main {
+  .articles {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    align-items: center;
+    flex-wrap: wrap;
+    .article {
+      margin-bottom: 8rem;
+      text-align: center;
+      img {
+        width: 35vw;
+        margin-top: 2rem;
+        overflow: hidden;
+      }
+      .article-top {
+        text-align: left;
+        .title {
+          font-size: 2rem;
+          font-weight: 800;
+          color: $blueColor;
+        }
+
+        .date {
+          font-size: 1.4rem;
+          font-weight: 600;
+        }
+      }
+
+      .content {
+        text-align: left;
+        font-size: 1.1rem;
+      }
+
+      .author {
+        font-size: 1.6rem;
+        text-align: left;
+        color: $redColor;
+        font-weight: 800;
+      }
+    }
+  }
+}

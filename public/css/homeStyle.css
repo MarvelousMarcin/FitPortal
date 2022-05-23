@@ -1,0 +1,55 @@
+main .articles {
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .articles .article {
+  margin-bottom: 8rem;
+  text-align: center;
+}
+
+main .articles .article img {
+  width: 35vw;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+
+main .articles .article .article-top {
+  text-align: left;
+}
+
+main .articles .article .article-top .title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #42bdb3;
+}
+
+main .articles .article .article-top .date {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+main .articles .article .content {
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+main .articles .article .author {
+  font-size: 1.6rem;
+  text-align: left;
+  color: #e3647d;
+  font-weight: 800;
+}
+/*# sourceMappingURL=homeStyle.css.map */
