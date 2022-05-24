@@ -1,4 +1,4 @@
-# FitPortal
+# FitPortal - still in development
 
 ## Technologies
 
