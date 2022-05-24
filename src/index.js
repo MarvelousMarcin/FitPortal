@@ -2,7 +2,7 @@ const http = require("http");
 const express = require("express");
 const socketio = require("socket.io");
 const path = require("path");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 const publicDirPath = path.join(__dirname, "../public");
 
 const UserRoute = require("./Routes/user");
@@ -17,7 +17,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const { auth, reDirToMain } = require("./Routes/auth");
 require("./mongoose");
-const dbString = "mongodb://127.0.0.1:27017/FitPortal";
+const dbString = process.env.MONGODB_URL;
 
 const app = express();
 const server = http.createServer(app);
@@ -30,7 +30,7 @@ app.engine("html", require("hbs").__express);
 app.use(express.json());
 app.use(
   session({
-    secret: "some secret",
+    secret: process.env.SESSION_KEY,
     resave: false,
     cookie: { maxAge: 3000000 },
     saveUninitialized: false,
@@ -40,7 +40,7 @@ app.use(
 io.use(
   wrap(
     session({
-      secret: "some secret",
+      secret: process.env.SESSION_KEY,
       resave: false,
       cookie: { maxAge: 3000000 },
       saveUninitialized: false,
