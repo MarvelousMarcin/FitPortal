@@ -8,16 +8,13 @@ $loginBtn.addEventListener("click", async (e) => {
   const password = $passwordInput.value;
   const bodyVal = { login, password };
 
-  const response = await fetch(
-    "https://fit-portal-project.herokuapp.com/login",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(bodyVal),
-    }
-  );
+  const response = await fetch(`${process.env.REQ_URL}login`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(bodyVal),
+  });
 
   if (response.ok) {
     return (location.href = "/mainpage");
