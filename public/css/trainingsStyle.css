@@ -1,0 +1,161 @@
+.train {
+  color: #42bdb3;
+}
+
+main {
+  height: 89vh;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .blur {
+  position: fixed;
+  opacity: 0.8;
+  background: #444444;
+  width: 100%;
+  height: 89vh;
+  opacity: 0;
+  z-index: -3;
+}
+
+main .add--box {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: white;
+  height: 60%;
+  width: 25%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-radius: 2%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  z-index: 10;
+}
+
+main .add--box input {
+  outline: none;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  border-bottom: 5px solid #e3647d;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+main .add--box input:focus {
+  border-bottom: 5px solid #42bdb3;
+}
+
+main .add--box .add-name {
+  width: 15rem;
+}
+
+main .add--box .add-date {
+  width: 15rem;
+}
+
+main .add--box .add-duration {
+  width: 15rem;
+}
+
+main .add--box button {
+  width: 12rem;
+  height: 2.5rem;
+  border: none;
+  background: #42bdb3;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  font-size: 1.2rem;
+}
+
+main .add--box button:hover {
+  background: #e3647d;
+}
+
+main .fi-rr-add {
+  position: absolute;
+  top: 2rem;
+  left: 5rem;
+  font-size: 2rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 10;
+}
+
+main .fi-rr-add:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #e3647d;
+}
+
+main .bg--wave {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -3;
+}
+
+main img {
+  width: 40rem;
+}
+
+main .trainings {
+  overflow: scroll;
+  height: 30rem;
+  -ms-overflow-style: none;
+  /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+  /* for Firefox */
+  overflow-y: scroll;
+  width: 30%;
+}
+
+main .trainings::-webkit-scrollbar {
+  display: none;
+  /* for Chrome, Safari, and Opera */
+}
+
+main .trainings .training .title {
+  font-size: 2.53rem;
+  font-weight: 800;
+}
+
+main .trainings .training .duration {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e3647d;
+}
+
+main .trainings .training .date {
+  font-size: 1.2rem;
+  color: #42bdb3;
+}
+/*# sourceMappingURL=trainingsStyle.css.map */

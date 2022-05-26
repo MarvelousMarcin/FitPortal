@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FitPortal</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/trainingsStyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="/mainpage"><span style="color: #42bdb3">Fit</span>Portal</a>
+      </div>
+      <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/data">Your data</a></li>
+        <li><a href="/friends">Friends</a></li>
+        <li><a href="/bmi">BMI</a></li>
+        <li><a href="/activities">Activity</a></li>
+        <li><a class="train" href="/trainings">Trainings</a></li>
+        <li><a href="/logout">Log out</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="blur"></div>
+      <div class="add--box">
+        <input class="add-name" type="text" placeholder="Name" />
+        <input class="add-duration" type="number" placeholder="Duration(min)" />
+        <input class="add-date" type="date" placeholder="Date" />
+        <button class="add-btn">Add</button>
+      </div>
+      <i class="fi fi-rr-add"></i>
+      <img class="bg--wave" src="./img/wave.png" />
+      <img src="./img/undraw_personal_training_0dqn.svg" />
+      <div class="trainings">
+        <div class="training">
+          <div class="title">Workout</div>
+          <div class="duration">1h 22min</div>
+          <div class="date">12.07.2022</div>
+        </div>
+        <div class="training">
+          <div class="title">Running</div>
+          <div class="duration">1h 22min</div>
+          <div class="date">12.07.2022</div>
+        </div>
+        <div class="training">
+          <div class="title">Jogging</div>
+          <div class="duration">1h 22min</div>
+          <div class="date">12.07.2022</div>
+        </div>
+        <div class="training">
+          <div class="title">Workout</div>
+          <div class="duration">1h 22min</div>
+          <div class="date">12.07.2022</div>
+        </div>
+        <div class="training">
+          <div class="title">Workout</div>
+          <div class="duration">1h 22min</div>
+          <div class="date">12.07.2022</div>
+        </div>
+        <div class="training">
+          <div class="title">Workout</div>
+          <div class="duration">1h 22min</div>
+          <div class="date">12.07.2022</div>
+        </div>
+        <div class="training">
+          <div class="title">Workout</div>
+          <div class="duration">1h 22min</div>
+          <div class="date">12.07.2022</div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/trainingsPage/addingTrain.js"></script>
+  </body>
+</html>
