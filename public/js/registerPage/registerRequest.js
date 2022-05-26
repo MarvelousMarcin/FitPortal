@@ -4,6 +4,7 @@ const $password2 = document.querySelector("#register--input--password2");
 const $email = document.querySelector("#register--input--email");
 const $login = document.querySelector("#register--input--login");
 const $registerBtn = document.querySelector(".register--btn");
+const $registerTitle = document.querySelector(".register--title");
 
 $registerBtn.addEventListener("click", async (e) => {
   e.preventDefault();
@@ -12,7 +13,6 @@ $registerBtn.addEventListener("click", async (e) => {
   const email = $email.value;
   const password1 = $password1.value;
   const password2 = $password2.value;
-  const checkbox = $checkbox.value === "on" ? true : false;
 
   // Password One === Password Two
   if (password1 !== password2) {
@@ -30,5 +30,8 @@ $registerBtn.addEventListener("click", async (e) => {
 
   if (response.ok) {
     location.href = "/login";
+  } else {
+    const data = await response.json();
+    $registerTitle.textContent = data.error;
   }
 });

@@ -1,5 +1,4 @@
 const balls = document.querySelectorAll(".ball");
-console.log(balls);
 
 const t1 = gsap.timeline({
   default: { delay: 0, duration: 0.3 },
