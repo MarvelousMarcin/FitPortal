@@ -63,6 +63,9 @@ $blur.addEventListener("click", () => {
   $addBox.style.transform = "scale(0)";
   $blur.style.opacity = "0";
   $blur.style.zIndex = "-3";
+  $nameInput.value = "";
+  $duratInput.value = "";
+  $dateInput.value = "";
 });
 
 $sendReq.addEventListener("click", async () => {
