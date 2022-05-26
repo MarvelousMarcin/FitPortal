@@ -57,8 +57,6 @@ $addFriendDbBtn.addEventListener("click", async () => {
   } else {
     const html = `<div class="friends--friend">
     <div class="login">${loginValue}</div>
-    <i class="fi fi-rr-user"></i>
-    <i class="fi fi-rr-envelope"></i>
   </div>`;
 
     $friends.insertAdjacentHTML("beforeend", html);
