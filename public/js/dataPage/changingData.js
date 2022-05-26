@@ -7,6 +7,10 @@ const $heigthInput = document.querySelector(".heigth");
 const $weigthInput = document.querySelector(".weigth");
 const $ageInput = document.querySelector(".age");
 const $sexInput = document.querySelector(".data--input--value--sex");
+const $infoBtn = document.querySelector(".info");
+const $infoBox = document.querySelector(".info--box");
+const $infoPopup = document.querySelector(".info--popup");
+const $hideInfo = document.querySelector(".info--hide");
 
 const loadData = async () => {
   const response = await fetch("http://localhost:3000/dataValue");
@@ -107,4 +111,16 @@ $sexInput.closest(".data--sex").addEventListener("click", () => {
       $sexInput.value = "Male";
     }
   }
+});
+
+$infoBtn.addEventListener("click", () => {
+  $infoBox.style.opacity = "0.8";
+  $infoBox.style.zIndex = "4";
+  $infoPopup.style.transform = "scale(1)";
+});
+
+$hideInfo.addEventListener("click", () => {
+  $infoBox.style.opacity = "0";
+  $infoBox.style.zIndex = "-4";
+  $infoPopup.style.transform = "scale(0)";
 });

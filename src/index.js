@@ -79,6 +79,10 @@ app.get("/friends", reDirToMain, (req, res) => {
   res.render("friends");
 });
 
+app.get("/squats", reDirToMain, (req, res) => {
+  res.render("squats");
+});
+
 app.get("/pushups", reDirToMain, (req, res) => {
   res.render("pushups");
 });

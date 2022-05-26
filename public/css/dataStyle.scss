@@ -13,6 +13,59 @@ main {
   margin-right: auto;
   position: relative;
 
+  .info--box {
+    position: fixed;
+    width: 100%;
+    height: 89vh;
+    opacity: 50%;
+    background: #444444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -5;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+
+  .info--popup {
+    position: fixed;
+    background: white;
+    width: 30%;
+    height: 40%;
+    opacity: 100%;
+    z-index: 4;
+    border-radius: 3%;
+    padding: 2rem;
+    transform: scale(0);
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    .info--title {
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
+    .info--content {
+      font-size: 1.1rem;
+    }
+
+    .info--hide {
+      background: $blueColor;
+      color: white;
+      outline: none;
+      border: none;
+      font-size: 1.2rem;
+      width: 5rem;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      &:hover {
+        background: $redColor;
+      }
+    }
+  }
   .data--options {
     display: flex;
     flex-direction: row;
