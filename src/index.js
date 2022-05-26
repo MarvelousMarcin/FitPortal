@@ -10,6 +10,7 @@ const BmiRoute = require("./Routes/bmi");
 const DataRoute = require("./Routes/data");
 const FriendsRoute = require("./Routes/friends");
 const ActivRoute = require("./Routes/activities");
+const TrainingRoute = require("./Routes/training");
 
 const wrap = (middleware) => (socket, next) =>
   middleware(socket.request, {}, next);
@@ -54,6 +55,7 @@ app.use(DataRoute);
 app.use(BmiRoute);
 app.use(FriendsRoute);
 app.use(ActivRoute);
+app.use(TrainingRoute);
 
 app.get("/login", auth, (req, res) => {
   res.render("login");

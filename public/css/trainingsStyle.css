@@ -45,7 +45,7 @@ main .add--box {
           flex-direction: column;
   background: white;
   height: 60%;
-  width: 25%;
+  width: 35%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -72,19 +72,19 @@ main .add--box input:focus {
 }
 
 main .add--box .add-name {
-  width: 15rem;
+  width: 70%;
 }
 
 main .add--box .add-date {
-  width: 15rem;
+  width: 70%;
 }
 
 main .add--box .add-duration {
-  width: 15rem;
+  width: 70%;
 }
 
 main .add--box button {
-  width: 12rem;
+  width: 80%;
   height: 2.5rem;
   border: none;
   background: #42bdb3;
