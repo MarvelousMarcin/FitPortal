@@ -2,16 +2,13 @@ $blueColor: #42bdb3;
 $textColor: #444444;
 $redColor: #e3647d;
 
+.frie {
+  color: $blueColor;
+}
+
 main {
   height: 89vh;
   position: relative;
-
-  .bg--pic {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 20%;
-  }
 
   .fi-rr-user-add {
     position: absolute;
@@ -32,9 +29,21 @@ main {
 
   .add--user {
     position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
     top: 2rem;
     left: 15rem;
     transition: all 0.3s ease;
+    width: 40%;
+
+    .error-message {
+      color: $redColor;
+      font-weight: 800;
+      font-size: 1.1rem;
+      opacity: 0;
+    }
 
     input {
       height: 3rem;

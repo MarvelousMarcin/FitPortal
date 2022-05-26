@@ -2,6 +2,10 @@ $blueColor: #42bdb3;
 $textColor: #444444;
 $redColor: #e3647d;
 
+.activ {
+  color: $blueColor;
+}
+
 main {
   display: flex;
   flex-direction: row;

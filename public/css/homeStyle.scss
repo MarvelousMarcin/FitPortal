@@ -2,6 +2,10 @@ $blueColor: #42bdb3;
 $textColor: #444444;
 $redColor: #e3647d;
 
+.home {
+  color: $blueColor;
+}
+
 main {
   .articles {
     margin-top: 4rem;

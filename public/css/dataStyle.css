@@ -1,3 +1,7 @@
+.data {
+  color: #42bdb3;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;

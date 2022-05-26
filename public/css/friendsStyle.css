@@ -1,13 +1,10 @@
+.frie {
+  color: #42bdb3;
+}
+
 main {
   height: 89vh;
   position: relative;
-}
-
-main .bg--pic {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 20%;
 }
 
 main .fi-rr-user-add {
@@ -31,10 +28,30 @@ main .invisible {
 
 main .add--user {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   top: 2rem;
   left: 15rem;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  width: 40%;
+}
+
+main .add--user .error-message {
+  color: #e3647d;
+  font-weight: 800;
+  font-size: 1.1rem;
+  opacity: 0;
 }
 
 main .add--user input {

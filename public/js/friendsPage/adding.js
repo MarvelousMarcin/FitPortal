@@ -6,12 +6,14 @@ const $friends = document.querySelector(".friends--container");
 const $userLoginInput = document.querySelector(".user--login--input");
 const $chatBox = document.querySelector(".chat--box");
 const $boxMessage = document.querySelector(".message");
+const $addingError = document.querySelector(".error-message");
 
 const $addFriendDbBtn = document.querySelector(".add--user--btn");
 const $addFriendBtn = document.querySelector(".fi-rr-user-add");
 const $addFriendPlace = document.querySelector(".add--user");
 $addFriendBtn.addEventListener("click", () => {
   $addFriendPlace.classList.toggle("invisible");
+  $addingError.style.opacity = "0";
 });
 
 const getFriendsList = async function () {
@@ -27,15 +29,6 @@ const getFriendsList = async function () {
 
     $friends.insertAdjacentHTML("beforeend", html);
   });
-
-  const $sendMess = document.querySelectorAll(".fi-rr-envelope");
-
-  $sendMess.forEach((envelop) =>
-    envelop.addEventListener("click", function (e) {
-      const messToUser = this.closest(".friends--friend").getAttribute("value");
-      $boxMessage.textContent = messToUser;
-    })
-  );
 };
 
 $addFriendDbBtn.addEventListener("click", async () => {
@@ -55,7 +48,7 @@ $addFriendDbBtn.addEventListener("click", async () => {
   const data = await response.json();
 
   if (data.error) {
-    console.log(data.error);
+    $addingError.style.opacity = "1";
   } else {
     const html = `<div class="friends--friend">
     <div class="login">${loginValue}</div>
@@ -64,15 +57,11 @@ $addFriendDbBtn.addEventListener("click", async () => {
   </div>`;
 
     $friends.insertAdjacentHTML("beforeend", html);
+
+    $addFriendPlace.classList.toggle("invisible");
   }
 
-  $addFriendPlace.classList.toggle("invisible");
   $userLoginInput.value = "";
 });
 
 getFriendsList();
-
-const $sendBtn = document.querySelector(".send--message");
-const $messInput = document.querySelector(".message--input");
-
-$sendBtn.addEventListener("click", () => {});
