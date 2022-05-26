@@ -46,6 +46,7 @@ main img {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 65%;
+  position: relative;
 }
 
 .login--box .login--text {
@@ -117,6 +118,17 @@ main img {
 .login--box form .invisible {
   -webkit-transform: translateY(1rem);
           transform: translateY(1rem);
+}
+
+.login--box form .error-message {
+  font-size: 1.3rem;
+  color: #e3647d;
+  font-weight: 800;
+  position: absolute;
+  bottom: -3rem;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  opacity: 0;
 }
 
 .login--box form input {

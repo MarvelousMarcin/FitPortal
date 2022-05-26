@@ -33,6 +33,7 @@ main {
   align-items: flex-start;
   flex-direction: column;
   height: 65%;
+  position: relative;
 
   .login--text {
     font-size: 4rem;
@@ -83,6 +84,16 @@ main {
 
     .invisible {
       transform: translateY(1rem);
+    }
+
+    .error-message {
+      font-size: 1.3rem;
+      color: $redColor;
+      font-weight: 800;
+      position: absolute;
+      bottom: -3rem;
+      transition: all 0.1s ease-in;
+      opacity: 0;
     }
 
     input {

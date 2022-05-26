@@ -74,7 +74,7 @@ userRoute.post("/login", async (req, res) => {
     };
     res.send();
   } else {
-    res.status(403).send();
+    res.status(403).send({ error: "Wrong data" });
   }
 });
 
