@@ -10,6 +10,55 @@ main {
   height: 89vh;
   position: relative;
 
+  .blur {
+    position: fixed;
+    opacity: 0.8;
+    background: $textColor;
+    width: 100%;
+    height: 89vh;
+    opacity: 0;
+    z-index: -3;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .add--box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    height: 50%;
+    width: 25%;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 2%;
+    transform: scale(0);
+    z-index: 10;
+    top: 20%;
+    transition: all 0.7s ease-in-out;
+
+    .box--login {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: $blueColor;
+    }
+
+    .box--h {
+      font-size: 1.3rem;
+    }
+
+    .box--w {
+      font-size: 1.3rem;
+    }
+
+    .box--a {
+      font-size: 1.3rem;
+    }
+
+    .box--s {
+      font-size: 1.3rem;
+    }
+  }
+
   .fi-rr-user-add {
     position: absolute;
     top: 2rem;

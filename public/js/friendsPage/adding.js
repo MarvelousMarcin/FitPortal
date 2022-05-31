@@ -7,14 +7,50 @@ const $userLoginInput = document.querySelector(".user--login--input");
 const $chatBox = document.querySelector(".chat--box");
 const $boxMessage = document.querySelector(".message");
 const $addingError = document.querySelector(".error-message");
+const $blur = document.querySelector(".blur");
+const $addBox = document.querySelector(".add--box");
 
 const $addFriendDbBtn = document.querySelector(".add--user--btn");
 const $addFriendBtn = document.querySelector(".fi-rr-user-add");
 const $addFriendPlace = document.querySelector(".add--user");
+
 $addFriendBtn.addEventListener("click", () => {
   $addFriendPlace.classList.toggle("invisible");
   $addingError.style.opacity = "0";
 });
+
+const readAllData = async (login) => {
+  const response = await fetch("http://localhost:3000/getuserinfo", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ login }),
+  });
+  const data = await response.json();
+  const $loginPlace = document.querySelector(".box--login");
+  $loginPlace.textContent = login;
+
+  const $weighPlace = document.querySelector(".box--w");
+  const $heighPlace = document.querySelector(".box--h");
+  const $agePlace = document.querySelector(".box--a");
+  const $sexPlace = document.querySelector(".box--s");
+
+  if (!data.weigth) {
+    $weighPlace.textContent = `?`;
+    $heighPlace.textContent = `?`;
+    $agePlace.textContent = `?`;
+    $sexPlace.textContent = `?`;
+    return;
+  }
+  $weighPlace.textContent = `Weigth: ${data.weigth}kg`;
+
+  $heighPlace.textContent = `Heigth: ${data.heigth}cm`;
+
+  $agePlace.textContent = `Age: ${data.age}yo`;
+
+  $sexPlace.textContent = `Sex: ${data.sex}`;
+};
 
 const getFriendsList = async function () {
   const response = await fetch("http://localhost:3000/friendlist");
@@ -24,10 +60,31 @@ const getFriendsList = async function () {
     const html = `<div value="${friend}" class="friends--friend">
     <div class="login">${friend}</div>
     <i class="fi fi-rr-user"></i>
-    <i class="fi fi-rr-envelope"></i>
   </div>`;
 
     $friends.insertAdjacentHTML("beforeend", html);
+  });
+
+  const $seeProfileBtn = document.querySelectorAll(".fi-rr-user");
+
+  $seeProfileBtn.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      $addBox.style.transform = "scale(1)";
+      $blur.style.opacity = ".7";
+      $blur.style.zIndex = "4";
+
+      const target = e.target.closest(".friends--friend").getAttribute("value");
+      const data = readAllData(target);
+    });
+  });
+
+  $blur.addEventListener("click", () => {
+    $addBox.style.transform = "scale(0)";
+    $blur.style.opacity = "0";
+    $blur.style.zIndex = "-3";
+    $nameInput.value = "";
+    $duratInput.value = "";
+    $dateInput.value = "";
   });
 };
 

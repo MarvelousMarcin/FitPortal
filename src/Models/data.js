@@ -24,6 +24,15 @@ const dataScheme = mongoonse.Schema({
   },
 });
 
+dataScheme.methods.toJSON = function () {
+  const dataObj = this.toObject();
+  delete dataObj._id;
+  delete dataObj.__v;
+  delete dataObj.user;
+
+  return dataObj;
+};
+
 const Data = mongoonse.model("Data", dataScheme);
 
 module.exports = Data;

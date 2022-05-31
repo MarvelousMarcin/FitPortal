@@ -2,6 +2,7 @@ const express = require("express");
 const bcrypt = require("bcrypt");
 const userRoute = express.Router();
 const User = require("../Models/user");
+const Data = require("../Models/data");
 const UserJoi = require("../Validate/validateUser");
 const { auth, loginRedir, reDirToMain } = require("./auth");
 
@@ -81,6 +82,30 @@ userRoute.post("/login", async (req, res) => {
 userRoute.get("/logout", reDirToMain, (req, res) => {
   req.session.destroy();
   res.redirect("/");
+});
+
+userRoute.post("/getuserinfo", reDirToMain, async (req, res) => {
+  const login = req.body.login;
+
+  if (!login) {
+    return res.status(400).send({ error: "Problem" });
+  }
+
+  const findUser = await User.findOne({ login });
+
+  if (!findUser) {
+    return res.status(400).send({ error: "Problem" });
+  }
+
+  const userId = findUser._id;
+
+  const findData = await Data.findOne({ user: userId });
+
+  if (!findData) {
+    return res.status(400).send({ error: "No data filled" });
+  }
+
+  res.send(findData);
 });
 
 module.exports = userRoute;
