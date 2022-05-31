@@ -20,13 +20,16 @@ $addFriendBtn.addEventListener("click", () => {
 });
 
 const readAllData = async (login) => {
-  const response = await fetch("http://localhost:3000/getuserinfo", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ login }),
-  });
+  const response = await fetch(
+    "https://fit-portal-project.herokuapp.com/getuserinfo",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ login }),
+    }
+  );
   const data = await response.json();
   const $loginPlace = document.querySelector(".box--login");
   $loginPlace.textContent = login;
@@ -53,7 +56,9 @@ const readAllData = async (login) => {
 };
 
 const getFriendsList = async function () {
-  const response = await fetch("http://localhost:3000/friendlist");
+  const response = await fetch(
+    "https://fit-portal-project.herokuapp.com/friendlist"
+  );
   const data = await response.json();
 
   data.forEach((friend) => {
@@ -94,13 +99,16 @@ $addFriendDbBtn.addEventListener("click", async () => {
     return;
   }
 
-  const response = await fetch("http://localhost:3000/addfriend", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ login: loginValue }),
-  });
+  const response = await fetch(
+    "https://fit-portal-project.herokuapp.com/addfriend",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ login: loginValue }),
+    }
+  );
 
   const data = await response.json();
 

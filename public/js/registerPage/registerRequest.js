@@ -20,13 +20,16 @@ $registerBtn.addEventListener("click", async (e) => {
   }
 
   const body = { login, email, password: password1 };
-  const response = await fetch("http://localhost:3000/register", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(body),
-  });
+  const response = await fetch(
+    "https://fit-portal-project.herokuapp.com/register",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    }
+  );
 
   if (response.ok) {
     location.href = "/login";

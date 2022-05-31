@@ -13,7 +13,9 @@ const $infoPopup = document.querySelector(".info--popup");
 const $hideInfo = document.querySelector(".info--hide");
 
 const loadData = async () => {
-  const response = await fetch("http://localhost:3000/dataValue");
+  const response = await fetch(
+    "https://fit-portal-project.herokuapp.com/dataValue"
+  );
   const data = await response.json();
   if (!data.message) {
     $heigthInput.value = data.heigth + "cm";
@@ -87,7 +89,7 @@ $saveBtn.addEventListener("click", async () => {
   const reqBody = { heigth, weigth, age, sex };
   console.log(reqBody);
 
-  await fetch("http://localhost:3000/data", {
+  await fetch("https://fit-portal-project.herokuapp.com/data", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

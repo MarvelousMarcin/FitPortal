@@ -6,7 +6,9 @@ const $bmiTips = document.querySelector(".bmi--tip");
 const $pic = document.querySelectorAll(".info--img");
 
 const loadBmiInfo = async () => {
-  const response = await fetch("http://localhost:3000/bmiValue");
+  const response = await fetch(
+    "https://fit-portal-project.herokuapp.com/bmiValue"
+  );
   const data = await response.json();
 
   console.log(data);

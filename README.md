@@ -6,4 +6,4 @@ JavaScript, HTML, CSS, Node.JS, Express, express-session, MongoDB, mongoose
 
 ## Heroku Page
 
-http://localhost:3000/
+https://fit-portal-project.herokuapp.com/

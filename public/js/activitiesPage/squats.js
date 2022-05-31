@@ -5,13 +5,16 @@ const $allAccept = document.querySelectorAll(".fi-br-check");
 let doneDays = [];
 
 const loadDoneActivities = async function () {
-  const response = await fetch("http://localhost:3000/activitieslist", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ type: "squats" }),
-  });
+  const response = await fetch(
+    "https://fit-portal-project.herokuapp.com/activitieslist",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ type: "squats" }),
+    }
+  );
   doneDays = await response.json();
 
   addListners(doneDays);
@@ -32,7 +35,7 @@ const addListners = function (doneDays) {
         check.style.transform = "scale(0)";
         activ.style.border = "7px solid #42bdb3";
 
-        await fetch("http://localhost:3000/activities", {
+        await fetch("https://fit-portal-project.herokuapp.com/activities", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -43,7 +46,7 @@ const addListners = function (doneDays) {
         check.style.transform = "scale(1)";
         activ.style.border = "7px solid #e3647d";
 
-        await fetch("http://localhost:3000/activities", {
+        await fetch("https://fit-portal-project.herokuapp.com/activities", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
