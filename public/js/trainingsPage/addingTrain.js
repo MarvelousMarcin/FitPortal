@@ -33,9 +33,7 @@ const getTimeString = (time) => {
 };
 
 const loadTraingins = async () => {
-  const response = await fetch(
-    "https://fit-portal-project.herokuapp.com/traininglist"
-  );
+  const response = await fetch("http://localhost:3000/traininglist");
   const data = await response.json();
 
   if (!data) {
@@ -73,16 +71,13 @@ $sendReq.addEventListener("click", async () => {
   const duration = $duratInput.value;
   const date = new Date($dateInput.value).getTime();
 
-  const response = await fetch(
-    "https://fit-portal-project.herokuapp.com/training",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, duration, date }),
-    }
-  );
+  const response = await fetch("http://localhost:3000/training", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ name, duration, date }),
+  });
 
   if (response.ok) {
     const html = `<div class="training">

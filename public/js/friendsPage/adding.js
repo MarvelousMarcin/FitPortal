@@ -17,9 +17,7 @@ $addFriendBtn.addEventListener("click", () => {
 });
 
 const getFriendsList = async function () {
-  const response = await fetch(
-    "https://fit-portal-project.herokuapp.com/friendlist"
-  );
+  const response = await fetch("http://localhost:3000/friendlist");
   const data = await response.json();
 
   data.forEach((friend) => {
@@ -39,16 +37,13 @@ $addFriendDbBtn.addEventListener("click", async () => {
     return;
   }
 
-  const response = await fetch(
-    "https://fit-portal-project.herokuapp.com/addfriend",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ login: loginValue }),
-    }
-  );
+  const response = await fetch("http://localhost:3000/addfriend", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ login: loginValue }),
+  });
 
   const data = await response.json();
 
