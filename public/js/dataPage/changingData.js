@@ -86,6 +86,10 @@ $saveBtn.addEventListener("click", async () => {
     return;
   }
 
+  if (weigth > 300) {
+    return;
+  }
+
   const reqBody = { heigth, weigth, age, sex };
   console.log(reqBody);
 
