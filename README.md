@@ -1,4 +1,8 @@
-# FitPortal - still in development
+# FitPortal
+
+## Subject
+
+Fitness portal - Projekt Marcin Maciąg
 
 ## Technologies
 
